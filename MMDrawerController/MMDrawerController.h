@@ -214,6 +214,13 @@ typedef void (^MMDrawerControllerDrawerVisualStateBlock)(MMDrawerController * dr
  */
 @property (nonatomic, strong) UIColor * statusBarViewBackgroundColor;
 
+/**
+ The flag determining if the right drawer can be opened.
+
+ YES by default.
+ */
+@property (nonatomic) BOOL panningForRightSideAllowed;
+
 ///---------------------------------------
 /// @name Initializing a `MMDrawerController`
 ///---------------------------------------

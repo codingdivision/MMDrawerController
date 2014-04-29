@@ -1014,6 +1014,9 @@ static NSString *MMDrawerOpenSideKey = @"MMDrawerOpenSide";
                 visibleSide = MMDrawerSideRight;
                 percentVisible = ABS(xOffset)/self.maximumRightDrawerWidth;
             }
+
+            if (visibleSide == MMDrawerSideRight && !self.panningForRightSideAllowed) return;
+
             UIViewController * visibleSideDrawerViewController = [self sideDrawerViewControllerForSide:visibleSide];
             
             if(self.openSide != visibleSide){
